@@ -1,0 +1,32 @@
+{
+  "name": "@josundt/stylelint-config",
+  "version": "1.0.4",
+  "description": "Ruleset for css and sass (scss) code style and linting",
+  "main": "index.js",
+  "scripts": {
+    "lint": "echo \"No linting for this project\"",
+    "build": "echo \"No build for this project\"",
+    "test": "echo \"No tests for this project\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "hhttps://github.com/josundt/josundt-stylelint-config.git"
+  },
+  "keywords": [
+    "stylelint",
+    ".stylelintrc"
+  ],
+  "license": "ISC",
+  "files": [
+    ".stylelintrc"
+  ],
+  "author": {
+    "name": "Jørn Andre Sundt",
+    "email": "jorn.andre.sundt@jasmin.no"
+  },
+  "dependencies": {
+    "postcss-sass": "0.5.0",
+    "stylelint": "14.0.1",
+    "stylelint-config-standard-scss": "2.0.1"
+  }
+}
