@@ -9,7 +9,7 @@ module.exports = {
             customSyntax: "postcss-scss",
             rules: {
                 "selector-class-pattern": [
-                    "^([a-z][a-z0-9]*)([-_]{1,2}[a-z0-9]+)*$", // "^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$" // A MORE STRICT BEM REGEXP
+                    "^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
                     { "message": "Expected class selector to follow BEM conventions" }
                 ],
                 "selector-id-pattern": [
@@ -19,10 +19,10 @@ module.exports = {
                 "alpha-value-notation": undefined,                              // default: "percentage"        ALLOW BOTH PERCENTAGE AND NUMBER TO SPECIFY OPACITY FOR RGBA COLORS
                 "block-closing-brace-empty-line-before": undefined,             // default: "never",            ALLOW EMPTY LINE BEFORE CLOSING BRACE
                 "block-opening-brace-space-before": undefined,                  // default: "always"            ALLOW HORIZONTALLY ALIGNMENT OF RULE BLOCKS
-                "color-function-notation": "legacy",                            // default: "modern"            ?? CHANGE ??
                 "declaration-block-single-line-max-declarations": 1,            // default: 1                   MAX NUMBER OF DECLARATIONS FOR ONE LINE BLOCKS
                 "declaration-empty-line-before": undefined,                     // default: "never"             ALLOW EMOTY LINES BETWEEN DECLARATIONS
                 "declaration-no-important": true,                               // default: false               AVOID !important
+                "function-url-quotes": "always",                                // default: null
                 "indentation": 4,                                               // default: 2
                 "max-line-length": 180,                                         // default: 120                 MAX LINE LENGTH INCREASED
                 "no-descending-specificity": undefined,                         // default: true                DISABLED -- REQUIRES MANY CHANGES
@@ -39,6 +39,9 @@ module.exports = {
                 "scss/dollar-variable-empty-line-before": undefined,            // default: "always+exceptions" DO NOT REQUIRE STRICT RULES FOR NEWLINES BETWEEN SASS VARIABLES
                 "scss/double-slash-comment-empty-line-before": undefined,       // default: "always"            DO NOT REQUIRE NEW LINE BEFORE COMMENTS
                 "scss/selector-nest-combinators": "always",                     // default: false               FORCE NESTING IN SASS
+                "scss/at-import-partial-extension": "always",                   // default: undefined           REQUIRE OR DISALLOW EXTENSION IN @IMPORT COMMANDS.
+                "scss/at-import-partial-extension-blacklist": ["scss", "sass"]  // default: undefined           SPECIFY WHITELIST OF ALLOWED FILE EXTENSIONS FOR PARTIAL NAMES IN @IMPORT COMMANDS.
+
             }
         }
     ]
