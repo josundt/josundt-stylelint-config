@@ -23,12 +23,8 @@ module.exports = {
                 "declaration-empty-line-before": undefined,                     // default: "never"             ALLOW EMOTY LINES BETWEEN DECLARATIONS
                 "declaration-no-important": true,                               // default: false               AVOID !important
                 "function-url-quotes": "always",                                // default: null
-                "indentation": 4,                                               // default: 2
-                "max-line-length": 180,                                         // default: 120                 MAX LINE LENGTH INCREASED
                 "no-descending-specificity": undefined,                         // default: true                DISABLED -- REQUIRES MANY CHANGES
-                "number-leading-zero": "never",                                 // default: "always"            USE SHORTHAND SYNTAX FOR FRACTIONAL NUMBERS
-                "selector-max-id": 0,                                           // default: false
-                "string-quotes": "single"                                       // default: "double"            PREFER SINGLE QUOTES
+                "selector-max-id": 0                                            // default: false
             }
         },
         {
@@ -36,8 +32,11 @@ module.exports = {
             customSyntax: "postcss-scss",
             rules: {
                 "scss/at-import-partial-extension": undefined,                  // default: "never"             SKIP IMPORT ANALYSIS
-                "scss/dollar-variable-empty-line-before": undefined,            // default: "always+exceptions" DO NOT REQUIRE STRICT RULES FOR NEWLINES BETWEEN SASS VARIABLES
-                "scss/double-slash-comment-empty-line-before": undefined,       // default: "always"            DO NOT REQUIRE NEW LINE BEFORE COMMENTS
+                "scss/dollar-variable-empty-line-before": undefined,            // default: "always+exceptions" DO NOT REQUIRE STRICT RULES FOR NEWLINES BETWEEN SASS VARIABLES  - NB! disabled formatting style related rule
+                "scss/double-slash-comment-empty-line-before": undefined,       // default: "always"            DO NOT REQUIRE NEW LINE BEFORE COMMENTS - NB! disabled formatting style related rule
+                "scss/operator-no-newline-after": undefined,                    // default: true                DISALLOW LINEBREAKS AFTER SASS OPERATORS - NB! disabled formatting style related rule
+                "scss/operator-no-newline-before": undefined,                   // default: true                DISALLOW LINEBREAKS BEFORE SASS OPERATORS - NB! disabled formatting style related rule
+                "scss/operator-no-unspaced": undefined,                         // default: true                DISALLOW LINEBREAKS BEFORE SASS OPERATORS - NB! disabled formatting style related rule
                 "scss/selector-nest-combinators": "always",                     // default: false               FORCE NESTING IN SASS
                 "scss/at-import-partial-extension": "always",                   // default: undefined           REQUIRE OR DISALLOW EXTENSION IN @IMPORT COMMANDS.
                 "scss/at-import-partial-extension-blacklist": ["scss", "sass"]  // default: undefined           SPECIFY WHITELIST OF ALLOWED FILE EXTENSIONS FOR PARTIAL NAMES IN @IMPORT COMMANDS.
@@ -45,4 +44,4 @@ module.exports = {
             }
         }
     ]
-}
+};
