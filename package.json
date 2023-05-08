@@ -1,6 +1,6 @@
 {
   "name": "@josundt/stylelint-config",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Ruleset for css and sass (scss) code style and linting",
   "main": "index.js",
   "scripts": {
