@@ -1,6 +1,6 @@
 {
   "name": "@josundt/stylelint-config",
-  "version": "2.0.2",
+  "version": "2.2.0",
   "description": "Ruleset for css and sass (scss) code style and linting",
   "main": "index.js",
   "scripts": {
@@ -18,15 +18,18 @@
   ],
   "license": "ISC",
   "files": [
-    ".stylelintrc"
+    ".stylelintrc",
+    "formatter-sonar.js"
   ],
   "author": {
     "name": "Jørn Andre Sundt",
     "email": "jorn.andre.sundt@jasmin.no"
   },
   "dependencies": {
+    "@josundt/prettier-config": "^1.0.0",
     "postcss-sass": "0.5.0",
     "stylelint": "15.6.1",
-    "stylelint-config-standard-scss": "9.0.0"
+    "stylelint-config-standard-scss": "9.0.0",
+    "stylelint-prettier": "3.0.0"
   }
 }

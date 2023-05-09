@@ -18,16 +18,18 @@
    Uninstall exension from VSCode _(optional)_.
 
 ## Usage of @josundt/stylelint-config ##
-1. Install this package 
+1. Make sure you have installed and set up the package `@josundt/prettier-config` first.
 
-2. Add a `.stylelintrc` file in the workspace root with the following content: 
+2. Install this package 
+
+3. Add a `.stylelintrc` file in the workspace root with the following content: 
     ```json
     {
       "extends": ["@josundt/stylelint-config"]
     }
     ``` 
 
-3. Add a `.stylelintignore` file in the workspace root with typically the following content: 
+4. Add a `.stylelintignore` file in the workspace root with typically the following content: 
     ```text
     dist/**/*
     node_modules/**/*
@@ -35,20 +37,20 @@
     test.coverage/**/*
     ```
 
-4. Add npm task in **package.json**
+5. Add npm task in **package.json**
     ```json
     {
       // ...
       "scripts": {
         // ...
-        "lint:style": "stylelint **/*.{css,scss} -f unix"
+        "lint:style": "stylelint **/*.{css,scss} -f unix --allow-empty-input"
         // ...
       }
       // ...
     }
     ```
 
-5. When using Visual Studio Code:  
+6. When using Visual Studio Code:  
 
     __a)__ Install the `stylelint.vscode-stylelint` VSCode extension.
     
@@ -89,18 +91,15 @@
             "stylelint",
             "'**/*.{css,scss}'",
             "-f",
-            "unix"
+            "unix",
+            "--allow-empty-input"
           ],
           "group": "build",
-          "presentation": {
-            "echo": true,
-            "reveal": "silent",
-            "focus": false,
-            "panel": "shared"
-          },
           "problemMatcher": {
             "fileLocation": "absolute",
+            "owner": "Stylelint",
             "source": "Stylelint",
+      
             "pattern": {
               "regexp": "^(.+):(\\d+):(\\d+): (.+ \\((.*)\\)) \\[(error|warning|info)\\]$",
               "file": 1,
@@ -111,7 +110,7 @@
               "severity": 6
             }
           }
-        }
+        },
         // ...
       ]
     }

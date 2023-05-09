@@ -1,30 +1,41 @@
-'use strict';
+"use strict";
 
 module.exports = {
-    extends: ["stylelint-config-standard-scss"],
+    extends: [
+        "stylelint-config-standard-scss",
+        "stylelint-prettier/recommended"
+    ],
     defaultSeverity: "error",
     overrides: [
         {
             files: ["**/*.scss", "**/*.css"],
             customSyntax: "postcss-scss",
             rules: {
+                "prettier/prettier": true, // Include PRETTIER warnings
+
                 "selector-class-pattern": [
                     "^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
-                    { "message": "Expected class selector to follow BEM conventions" }
+                    {
+                        message:
+                            "Expected class selector to follow BEM conventions"
+                    }
                 ],
                 "selector-id-pattern": [
                     "^([a-z][a-z0-9]*)([-]{1,2}[a-z0-9]+)*$",
-                    { "message": "Expected id selector to be follow BEM conventions" }
+                    {
+                        message:
+                            "Expected id selector to be follow BEM conventions"
+                    }
                 ],
-                "alpha-value-notation": null,                                   // default: "percentage"        ALLOW BOTH PERCENTAGE AND NUMBER TO SPECIFY OPACITY FOR RGBA COLORS
-                "block-closing-brace-empty-line-before": null,                  // default: "never",            ALLOW EMPTY LINE BEFORE CLOSING BRACE
-                "block-opening-brace-space-before": null,                       // default: "always"            ALLOW HORIZONTALLY ALIGNMENT OF RULE BLOCKS
-                "declaration-block-single-line-max-declarations": 1,            // default: 1                   MAX NUMBER OF DECLARATIONS FOR ONE LINE BLOCKS
-                "declaration-empty-line-before": null,                          // default: "never"             ALLOW EMOTY LINES BETWEEN DECLARATIONS
-                "declaration-no-important": true,                               // default: false               AVOID !important
-                "function-url-quotes": "always",                                // default: null
-                "no-descending-specificity": null,                              // default: true                DISABLED -- REQUIRES MANY CHANGES
-                "selector-max-id": 0,                                           // default: false
+                "alpha-value-notation": null, // default: "percentage"                         ALLOW BOTH PERCENTAGE AND NUMBER TO SPECIFY OPACITY FOR RGBA COLORS
+                "block-closing-brace-empty-line-before": null, // default: "never",            ALLOW EMPTY LINE BEFORE CLOSING BRACE
+                "block-opening-brace-space-before": null, // default: "always"                 ALLOW HORIZONTALLY ALIGNMENT OF RULE BLOCKS
+                "declaration-block-single-line-max-declarations": 1, // default: 1             MAX NUMBER OF DECLARATIONS FOR ONE LINE BLOCKS
+                "declaration-empty-line-before": null, // default: "never"                     ALLOW EMOTY LINES BETWEEN DECLARATIONS
+                "declaration-no-important": true, // default: false                            AVOID !important
+                "function-url-quotes": "always", // default: null
+                "no-descending-specificity": null, // default: true                            DISABLED -- REQUIRES MANY CHANGES
+                "selector-max-id": 0, // default: false
 
                 // ===== Disabled formatting-style related rules that potentially conflict with Prettier ====
                 "comment-empty-line-before": null,
@@ -36,10 +47,10 @@ module.exports = {
             files: ["**/*.scss"],
             customSyntax: "postcss-scss",
             rules: {
-                "scss/at-import-partial-extension": null,                       // default: "never"             SKIP IMPORT ANALYSIS
-                "scss/selector-nest-combinators": "always",                     // default: false               FORCE NESTING IN SASS
-                "scss/at-import-partial-extension": "always",                   // default: null           REQUIRE OR DISALLOW EXTENSION IN @IMPORT COMMANDS.
-                "scss/at-import-partial-extension-blacklist": ["scss", "sass"],  // default: null           SPECIFY WHITELIST OF ALLOWED FILE EXTENSIONS FOR PARTIAL NAMES IN @IMPORT COMMANDS.
+                "scss/at-import-partial-extension": null, // default: "never"             SKIP IMPORT ANALYSIS
+                "scss/selector-nest-combinators": "always", // default: false               FORCE NESTING IN SASS
+                "scss/at-import-partial-extension": "always", // default: null           REQUIRE OR DISALLOW EXTENSION IN @IMPORT COMMANDS.
+                "scss/at-import-partial-extension-blacklist": ["scss", "sass"], // default: null           SPECIFY WHITELIST OF ALLOWED FILE EXTENSIONS FOR PARTIAL NAMES IN @IMPORT COMMANDS.
 
                 // ===== Disabled formatting-style related rules that potentially conflict with Prettier ====
                 "scss/at-else-closing-brace-newline-after": null,
