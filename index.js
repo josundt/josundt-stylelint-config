@@ -28,10 +28,8 @@ module.exports = {
                     }
                 ],
                 "alpha-value-notation": null, // default: "percentage"                         ALLOW BOTH PERCENTAGE AND NUMBER TO SPECIFY OPACITY FOR RGBA COLORS
-                "block-closing-brace-empty-line-before": null, // default: "never",            ALLOW EMPTY LINE BEFORE CLOSING BRACE
-                "block-opening-brace-space-before": null, // default: "always"                 ALLOW HORIZONTALLY ALIGNMENT OF RULE BLOCKS
                 "declaration-block-single-line-max-declarations": 1, // default: 1             MAX NUMBER OF DECLARATIONS FOR ONE LINE BLOCKS
-                "declaration-empty-line-before": null, // default: "never"                     ALLOW EMOTY LINES BETWEEN DECLARATIONS
+                "declaration-empty-line-before": null, // default: "never"                     ALLOW EMPTY LINES BETWEEN DECLARATIONS
                 "declaration-no-important": true, // default: false                            AVOID !important
                 "function-url-quotes": "always", // default: null
                 "no-descending-specificity": null, // default: true                            DISABLED -- REQUIRES MANY CHANGES
