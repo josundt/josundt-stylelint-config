@@ -45,10 +45,12 @@ module.exports = {
             files: ["**/*.scss"],
             customSyntax: "postcss-scss",
             rules: {
-                "scss/at-import-partial-extension": null, // default: "never"             SKIP IMPORT ANALYSIS
-                "scss/selector-nest-combinators": "always", // default: false               FORCE NESTING IN SASS
-                "scss/at-import-partial-extension": "always", // default: null           REQUIRE OR DISALLOW EXTENSION IN @IMPORT COMMANDS.
-                "scss/at-import-partial-extension-blacklist": ["scss", "sass"], // default: null           SPECIFY WHITELIST OF ALLOWED FILE EXTENSIONS FOR PARTIAL NAMES IN @IMPORT COMMANDS.
+                "scss/selector-nest-combinators": "always", // default: false                  FORCE NESTING IN SASS
+                "scss/at-import-partial-extension": "always", // default: null                 REQUIRE OR DISALLOW EXTENSION IN @IMPORT COMMANDS.
+                "scss/at-import-partial-extension-disallowed-list": [
+                    "scss",
+                    "sass"
+                ], // default: null                                                            SPECIFY WHITELIST OF ALLOWED FILE EXTENSIONS FOR PARTIAL NAMES IN @IMPORT COMMANDS.
 
                 // ===== Disabled formatting-style related rules that potentially conflict with Prettier ====
                 "scss/at-else-closing-brace-newline-after": null,
