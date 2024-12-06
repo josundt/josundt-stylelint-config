@@ -46,7 +46,7 @@ module.exports = {
             customSyntax: "postcss-scss",
             rules: {
                 "scss/selector-nest-combinators": "always", // default: false                  FORCE NESTING IN SASS
-                "scss/at-import-partial-extension": "always", // default: null                 REQUIRE OR DISALLOW EXTENSION IN @IMPORT COMMANDS.
+                "scss/load-partial-extension":    "always", // default: null                   REQUIRE OR DISALLOW EXTENSION IN @IMPORT COMMANDS.
                 "scss/at-import-partial-extension-disallowed-list": [
                     "scss",
                     "sass"
