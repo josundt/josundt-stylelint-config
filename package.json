@@ -1,6 +1,6 @@
 {
   "name": "@josundt/stylelint-config",
-  "version": "2.9.2",
+  "version": "17.6.0",
   "description": "Ruleset for css and sass (scss) code style and linting",
   "engines": {
     "node": ">=24.0.0"
@@ -29,10 +29,10 @@
     "email": "jorn.andre.sundt@jasmin.no"
   },
   "dependencies": {
-    "@josundt/prettier-config": "^3.7.4",
+    "@josundt/prettier-config": "^3.8.1",
     "postcss-sass": "0.5.0",
-    "stylelint": "16.26.1",
-    "stylelint-config-standard-scss": "16.0.0",
+    "stylelint": "17.6.0",
+    "stylelint-config-standard-scss": "17.0.0",
     "stylelint-prettier": "5.0.3"
   }
 }
